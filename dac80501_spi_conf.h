@@ -3,12 +3,12 @@
 /*
 @filename   dac80501_spi_conf.h
 
-@brief		»ùÓÚÈýÏßÖÆSPIµÄDAC80501Çý¶¯µÄÅäÖÃÍ·ÎÄ¼þ
-            Ê¹ÓÃ±¾Çý¶¯Ê±£¬±ØÐëÊµÏÖ±¾ÎÄ¼þËùÁÐ³öµÄºêº¯Êý
+@brief		åŸºäºŽä¸‰çº¿åˆ¶SPIçš„DAC80501é©±åŠ¨çš„é…ç½®å¤´æ–‡ä»¶
+            ä½¿ç”¨æœ¬é©±åŠ¨æ—¶ï¼Œå¿…é¡»å®žçŽ°æœ¬æ–‡ä»¶æ‰€åˆ—å‡ºçš„å®å‡½æ•°
 
 @time		2024/08/24
 
-@author		Àè½¡
+@author		ä¸é¹é¾™
 
 @attention  
 
@@ -21,16 +21,16 @@ extern "C" {
 #include <stdint.h>
 #include "delay.h"
 
-//´òÓ¡µ÷ÊÔÐÅÏ¢ÈÕÖ¾¿ª¹Ø
+//æ‰“å°è°ƒè¯•ä¿¡æ¯æ—¥å¿—å¼€å…³
 #define DAC80501_PRINT_DEBUG_INFO 1
 
-//±ØÐëÌá¹©ÑÓÊ±1usµÄº¯Êý,ÒÔ¹©Âú×ãSYNCµÄÐÅºÅÊ±Ðò
+//å¿…é¡»æä¾›å»¶æ—¶1usçš„å‡½æ•°,ä»¥ä¾›æ»¡è¶³SYNCçš„ä¿¡å·æ—¶åº
 #define DAC80501_DELAY_1US do{delay_us(1);}while(0)
 
-//±ØÐëÌá¹©¶¯Ì¬ÉêÇë¿Õ¼äµÄº¯Êý£¬ÒÔÂú×ã³õÊ¼»¯DAC80501µÄÐèÇó
+//å¿…é¡»æä¾›åŠ¨æ€ç”³è¯·ç©ºé—´çš„å‡½æ•°ï¼Œä»¥æ»¡è¶³åˆå§‹åŒ–DAC80501çš„éœ€æ±‚
 #define DAC80501_MALLOC(type) (type*)malloc(sizeof(type))
     
-//±ØÐëÌá¹©ÊÍ·Å¶¯Ì¬ÉêÇë¿Õ¼äµÄº¯Êý£¬ÒÔÂú×ã·´³õÊ¼»¯DAC80501µÄÐèÇó
+//å¿…é¡»æä¾›é‡Šæ”¾åŠ¨æ€ç”³è¯·ç©ºé—´çš„å‡½æ•°ï¼Œä»¥æ»¡è¶³ååˆå§‹åŒ–DAC80501çš„éœ€æ±‚
 #define DAC80501_FREE(ptr)  do{\
                                 if(ptr)\
                                 {\
